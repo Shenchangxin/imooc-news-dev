@@ -1,0 +1,13 @@
+server:
+  port: 8130
+spring:
+  redis:
+    port: 6379
+    database: 0
+    password: 123456
+    host: 192.168.181.129
+
+
+#设置域名，在java代码中获取，这里是资源配置
+website:
+  domain-name: imooc-news.com

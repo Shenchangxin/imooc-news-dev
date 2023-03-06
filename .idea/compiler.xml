@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/imooc-news-dev-service-article/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/imooc-news-dev-service-article-html/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/springcloud-eureka/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/springcloud-eureka-cluster/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/springcloud-zuul-server/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/springcloud-config/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/imooc-news-dev-service-search/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="imooc-news-dev-service-user" />
+        <module name="mybatis-generator-database" />
+        <module name="imooc-news-dev-service-article" />
+        <module name="imooc-news-dev-service-api" />
+        <module name="springcloud-config" />
+        <module name="imooc-news-dev-service-files" />
+        <module name="imooc-news-dev-common" />
+        <module name="imooc-news-dev-service-article-html" />
+        <module name="imooc-news-dev-service-search" />
+        <module name="imooc-news-dev-model" />
+        <module name="springcloud-eureka" />
+        <module name="springcloud-eureka-cluster" />
+        <module name="springcloud-zuul-server" />
+        <module name="imooc-news-dev-service-admin" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="imooc-news-dev" options="-parameters" />
+      <module name="imooc-news-dev-common" options="-parameters" />
+      <module name="imooc-news-dev-model" options="-parameters" />
+      <module name="imooc-news-dev-service-admin" options="-parameters" />
+      <module name="imooc-news-dev-service-api" options="-parameters" />
+      <module name="imooc-news-dev-service-article" options="-parameters" />
+      <module name="imooc-news-dev-service-article-html" options="-parameters" />
+      <module name="imooc-news-dev-service-files" options="-parameters" />
+      <module name="imooc-news-dev-service-search" options="-parameters" />
+      <module name="imooc-news-dev-service-user" options="-parameters" />
+      <module name="springcloud-config" options="-parameters" />
+      <module name="springcloud-eureka" options="-parameters" />
+      <module name="springcloud-eureka-cluster" options="-parameters" />
+      <module name="springcloud-zuul-server" options="-parameters" />
+    </option>
+  </component>
+</project>
