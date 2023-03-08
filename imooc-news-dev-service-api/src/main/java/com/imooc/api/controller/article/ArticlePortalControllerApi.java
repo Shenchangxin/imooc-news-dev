@@ -11,6 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("portal/article")
 public interface ArticlePortalControllerApi {
 
+    @GetMapping("es/list")
+    @ApiOperation(value = "首页通过ES查询所有文章列表",notes = "首页通过ES查询所有文章列表",httpMethod = "GET")
+    public GraceJSONResult eslist(@RequestParam String keyword,
+                                @RequestParam Integer category,
+                                @ApiParam(name = "page", value = "查询下一页的第几页", required = false)
+                                @RequestParam Integer page,
+                                @ApiParam(name = "pageSize", value = "分页的每一页显示的条数", required = false)
+                                @RequestParam Integer pageSize);
+
     @GetMapping("list")
     @ApiOperation(value = "首页查询所有文章列表",notes = "首页查询所有文章列表",httpMethod = "GET")
     public GraceJSONResult list(@RequestParam String keyword,

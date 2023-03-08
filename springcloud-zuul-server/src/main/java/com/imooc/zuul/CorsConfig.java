@@ -1,4 +1,4 @@
-package com.imooc.api.config;
+package com.imooc.zuul;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -6,7 +6,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
-//@Configuration
+@Configuration
 public class CorsConfig {
 
     public CorsConfig() {
@@ -17,7 +17,6 @@ public class CorsConfig {
         // 1. 添加cors配置信息
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedOrigin("*");
-
         // 设置是否发送cookie信息
         config.setAllowCredentials(true);
         // 设置允许请求的方式

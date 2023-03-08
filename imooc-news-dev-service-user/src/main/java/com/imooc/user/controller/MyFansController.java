@@ -25,6 +25,13 @@ public class MyFansController extends BaseController implements MyFansController
     private MyFanService myFanService;
 
     @Override
+    public GraceJSONResult forceUpdateFanInfo(String relationId, String fanId) {
+        myFanService.forceUpdateFanInfo(relationId,fanId);
+
+        return GraceJSONResult.ok();
+    }
+
+    @Override
     public GraceJSONResult isMeFollowThisWriter(String writer, String fanId) {
 
         boolean res = myFanService.isMeFollowThisWriter(writer,fanId);
@@ -58,19 +65,21 @@ public class MyFansController extends BaseController implements MyFansController
         }
 
 
-        return GraceJSONResult.ok(myFanService.queryMyFansList(writerId,page,pageSize));
+//        return GraceJSONResult.ok(myFanService.queryMyFansList(writerId,page,pageSize));
+        return GraceJSONResult.ok(myFanService.queryMyFansESList(writerId,page,pageSize));
+
     }
 
     @Override
     public GraceJSONResult queryRatio(String writerId) {
-        int manCounts = myFanService.queryFansCounts(writerId, Sex.man);
-        int womanCounts = myFanService.queryFansCounts(writerId, Sex.woman);
+//        int manCounts = myFanService.queryFansCounts(writerId, Sex.man);
+//        int womanCounts = myFanService.queryFansCounts(writerId, Sex.woman);
+//
+//        FansCountsVO fansCountsVO = new FansCountsVO();
+//        fansCountsVO.setManCounts(manCounts);
+//        fansCountsVO.setWomanCounts(womanCounts);
 
-        FansCountsVO fansCountsVO = new FansCountsVO();
-        fansCountsVO.setManCounts(manCounts);
-        fansCountsVO.setWomanCounts(womanCounts);
-
-
+        FansCountsVO fansCountsVO = myFanService.queryFansESCounts(writerId);
         return GraceJSONResult.ok(fansCountsVO);
     }
 
@@ -78,6 +87,6 @@ public class MyFansController extends BaseController implements MyFansController
     public GraceJSONResult queryRatioByRegion(String writerId) {
 
 
-        return GraceJSONResult.ok(myFanService.queryRegionRatioCounts(writerId));
+        return GraceJSONResult.ok(myFanService.queryRegionRatioESCounts(writerId));
     }
 }
